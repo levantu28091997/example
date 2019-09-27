@@ -4,45 +4,36 @@
             
             <div class="who-we-are__bottom">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="wwa-box wwa-box-duo">
-                            <div class="wwa-box-icon">
-                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+
+                    <?php 
+                    $args = array(
+                        'post_type'=> 'skill',
+                        'areas'    => 'painting',
+                        'order'    => 'ASC'
+                        );              
+
+                    $the_query = new WP_Query( $args );
+                    if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+
+                    ?>
+                            <div class="col-md-4">
+                                <div class="wwa-box wwa-box-duo">
+                                    <div class="wwa-box-icon">
+                                        <?php the_post_thumbnail(); ?>
+                                    </div>
+                                    <div class="wwa-box-content">
+                                        <h3 class="wwa-box-content__title"><?php the_title(); ?></h3>
+                                        <p class="wwa-box-content__des">
+                                            <?php the_content(); ?>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="wwa-box-content">
-                                <h3 class="wwa-box-content__title">Passion</h3>
-                                <p class="wwa-box-content__des">
-                                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="wwa-box wwa-box-mid">
-                            <div class="wwa-box-icon">
-                                <i class="fa fa-lemon-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="wwa-box-content">
-                                <h3 class="wwa-box-content__title">Creativity</h3>
-                                <p class="wwa-box-content__des">
-                                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="wwa-box wwa-box-duo">
-                            <div class="wwa-box-icon">
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="wwa-box-content">
-                                <h3 class="wwa-box-content__title">Quality</h3>
-                                <p class="wwa-box-content__des">
-                                    Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                            <?php
+                        endwhile;
+                    endif;
+                    ?>
+                    
                 </div>
             </div>
         </div>

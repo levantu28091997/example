@@ -6,19 +6,19 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="footer-info__intro">
-                                <h2 class="footer-info__title">Who we are</h2>
+                                <h2 class="footer-info__title"><?php echo get_theme_mod('footer_w_title'); ?></h2>
                                 <div class="footer-info__intro-logo"><img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/logo-footer.png" alt="Logo"></div>
                                 <p class="footer-info__intro-des">
-                                    Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes maio es dem tumquam.
+                                    <?php echo get_theme_mod('footer_w_info'); ?>
                                 </p>
-                                <a href="" class="footer-info__intro-link">More about us 
+                                <a href="<?php echo get_theme_mod('footer_w_link'); ?>" class="footer-info__intro-link"><?php echo get_theme_mod('footer_w_label'); ?> 
                                     <span class="icon-more"><img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/icon/icon-right.png" alt="More about us"></span>
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="footer-info__latest-work">
-                                <h2 class="footer-info__title">Latest works</h2>
+                                <h2 class="footer-info__title"><?php echo get_theme_mod('footer_l_title'); ?></h2>
                                 <div class="latest-work__list">
 
                                     <?php
@@ -52,23 +52,23 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="footer-info__get-in-touch">
-                                <h2 class="footer-info__title">Get in touch</h2>
+                                <h2 class="footer-info__title"><?php echo get_theme_mod('footer_g_title'); ?></h2>
                                 <p class="f-get-in-touch__des">
-                                    Doloreiur quia commolu ptatemp dolupta oreprerum tibusam eumenis et consent accullignis dentibea autem inisita.
+                                    <?php echo get_theme_mod('footer_g_des'); ?>
                                 </p>
                                 <div class="f-get-in-touch__contact">
                                     <ul class="f__contact-list">
                                         <li class="f__contact-item">
                                             <span class="f__contact-icon"><img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/icon/icon-f-location.png" alt="Location"></span>
-                                            <span>84 Street, City, State 24813</span>
+                                            <span><?php echo get_theme_mod('footer_g_address'); ?></span>
                                         </li>
                                         <li class="f__contact-item">
                                             <span class="f__contact-icon"><img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/icon/icon-f-mobie.png" alt="Phone"></span>
-                                            <span>+00 (123) 456 78 90</span>
+                                            <span><?php echo get_theme_mod('footer_g_phone'); ?></span>
                                         </li>
                                         <li class="f__contact-item">
                                             <span class="f__contact-icon"><img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/icon/icon-f-email.png" alt="Email"></span>
-                                            <span>info@reen.com</span>
+                                            <span><?php echo get_theme_mod('footer_g_email'); ?></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -76,8 +76,8 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div class="footer-info__free-updates">
-                                <h2 class="footer-info__title">Free updates</h2>
-                                <p class="f-free-updates__des">Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.</p>
+                                <h2 class="footer-info__title"><?php echo get_theme_mod('footer_f_title'); ?></h2>
+                                <p class="f-free-updates__des"><?php echo get_theme_mod('footer_f_des'); ?></p>
                                 <div class="form-submit__box">
                                     <form action="/submit-email" class="form-submit">
                                         <input type="email" class="form-submit__input" placeholder="Enter your email address">
@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="footer-copyright">
-                                <p>© <?php echo date('Y'); ?> REEN. All rights reserved.</p>
+                                <p><?php echo get_theme_mod('footer_c_copyright'); ?></p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12">
@@ -108,7 +108,6 @@
                                         'menu_class' => 'footer-menu__list' // class của menu bên trong
                                     )
                                 );
-
                                 ?>
                             </div>
                         </div>

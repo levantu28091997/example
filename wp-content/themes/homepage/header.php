@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Font -->
-    <link rel="stylesheet" href="fonts/font-awesome/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css">
 
     <?php wp_head(); ?>
   </head>
@@ -24,12 +22,12 @@
                             <div class="contact">
                                 <ul class="contact-list">
                                     <li class="contact-item i-email">
-                                        <span class="contact-icon"><img src="images/icon/icon-email.png" alt="Email" id="js-icon-email"></span>
-                                        <span>info@reen.com</span>
+                                        <span class="contact-icon"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-email.png" alt="Email" id="js-icon-email"></span>
+                                        <span><?php echo get_theme_mod('top_left_email'); ?></span>
                                     </li>
                                     <li class="contact-item i-phone">
-                                        <span class="contact-icon"><img src="images/icon/icon-phone.png" alt="Phone" id="js-icon-phone"></span>
-                                        <span>+00 (123) 456 78 90</span>
+                                        <span class="contact-icon"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-phone.png" alt="Phone" id="js-icon-phone"></span>
+                                        <span><?php echo get_theme_mod('top_left_phone'); ?></span>
                                     </li>
                                 </ul>
                             </div>
@@ -37,12 +35,29 @@
                         <div class="col-md-6">
                             <div class="social">
                                 <ul class="social-list">
-                                    <li class="social-item i-facebook"><a href="" class="social-link"><img src="images/icon/icon-facebook.png" alt="facebook" id="js-social-fb"></a></li>
-                                    <li class="social-item i-gplus"><a href="" class="social-link"><img src="images/icon/icon-gplus.png" alt="google plus" id="js-social-gplus"></a></li>
-                                    <li class="social-item i-twitter"><a href="" class="social-link"><img src="images/icon/icon-twitter.png" alt="twitter" id="js-social-twitter"></a></li>
-                                    <li class="social-item i-pinterest"><a href="" class="social-link"><img src="images/icon/icon-pinterest.png" alt="pinterest" id="js-social-pinterest"></a></li>
-                                    <li class="social-item i-behance"><a href="" class="social-link"><img src="images/icon/icon-behance.png" alt="behance" id="js-social-behance"></a></li>
-                                    <li class="social-item i-dribbble"><a href="" class="social-link"><img src="images/icon/icon-dribbble.png" alt="dribbble" id="js-social-dribbble"></a></li>
+                                    <?php if(get_theme_mod('top_right_facebook') != ''){ ?>
+                                    <li class="social-item i-facebook"><a href="<?php echo get_theme_mod('top_right_facebook'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-facebook.png" alt="facebook" id="js-social-fb"></a></li>
+                                    <?php } ?>
+
+                                    <?php if(get_theme_mod('top_right_google') != ''){ ?>
+                                    <li class="social-item i-gplus"><a href="<?php echo get_theme_mod('top_right_google'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-gplus.png" alt="google plus" id="js-social-gplus"></a></li>
+                                    <?php } ?>
+
+                                    <?php if(get_theme_mod('top_right_twitter') != ''){ ?>
+                                    <li class="social-item i-twitter"><a href="<?php echo get_theme_mod('top_right_twitter'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-twitter.png" alt="twitter" id="js-social-twitter"></a></li>
+                                    <?php } ?>
+
+                                    <?php if(get_theme_mod('top_right_pinterest') != ''){ ?>
+                                    <li class="social-item i-pinterest"><a href="<?php echo get_theme_mod('top_right_pinterest'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-pinterest.png" alt="pinterest" id="js-social-pinterest"></a></li>
+                                    <?php } ?>
+
+                                    <?php if(get_theme_mod('top_right_behance') != ''){ ?>
+                                    <li class="social-item i-behance"><a href="<?php echo get_theme_mod('top_right_behance'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-behance.png" alt="behance" id="js-social-behance"></a></li>
+                                    <?php } ?>
+
+                                    <?php if(get_theme_mod('top_right_dribbble') != ''){ ?>
+                                    <li class="social-item i-dribbble"><a href="<?php echo get_theme_mod('top_right_dribbble'); ?>" class="social-link"><img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-dribbble.png" alt="dribbble" id="js-social-dribbble"></a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
@@ -81,10 +96,10 @@
                                                                 <h2 class="megamenu__title">Focus on</h2>
                                                                 <div class="focuson__box">
                                                                     <a href="">
-                                                                        <img src="images/megamenu/img-megamenu.png" alt="Thumb" class="img-width100">
+                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/img-megamenu.png" alt="Thumb" class="img-width100">
                                                                         <div class="focuson__overlay">
                                                                             <span class="focuson__i-plus">
-                                                                                <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                             </span>
                                                                         </div>
                                                                     </a>
@@ -139,10 +154,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb1.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb1.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>
@@ -151,10 +166,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb2.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb2.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>
@@ -163,10 +178,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb3.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb3.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>
@@ -175,10 +190,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb4.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb4.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>
@@ -187,10 +202,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb5.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb5.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>
@@ -199,10 +214,10 @@
                                                                     <div class="latest-work__item">
                                                                         <div class="latest-work__box">
                                                                             <a href="">
-                                                                                <img src="images/megamenu/latest-thumb6.png" alt="Thumb">
+                                                                                <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/megamenu/latest-thumb6.png" alt="Thumb">
                                                                                 <div class="latest-work__overlay">
                                                                                     <span class="latest-work__i-plus">
-                                                                                        <img src="images/icon/icon-plus.png" alt="View more">
+                                                                                        <img src="<?php echo get_template_directory_uri().'/core/assets/' ?>images/icon/icon-plus.png" alt="View more">
                                                                                     </span>
                                                                                 </div>
                                                                             </a>

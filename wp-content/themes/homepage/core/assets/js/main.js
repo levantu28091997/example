@@ -33,78 +33,6 @@ $('.h-search-bg').on('click', function(e){
   e.preventDefault();
 })
 
-// Slide Homepage
-// $('.js-slide').slick({
-//   dots: true,
-//   infinite: true,
-//   slidesToShow: 1,
-//   arrows: true,
-//   prevArrow: '<button class="slide-prev"></button>',
-//   nextArrow: '<button class="slide-next"></button>',
-//   slidesToScroll: 1,
-//   autoplay: false,
-//   speed: 300
-// });
-
-// Slide button click
-// $('.js-prev-slide').on('click', function(e){
-//   $(".slide-prev").click();
-//   e.preventDefault();
-// })
-// $('.js-next-slide').on('click', function(e){  
-//   $(".slide-next").click();
-//   e.preventDefault();
-// })
-
-
-// Change icon social header
-// function changIconSocailHeader(jsClass, jsId, jsImg){
-//   $(jsClass).on({
-//     mouseenter: function(e){
-//       $(jsId).attr("src","images/icon/icon-" + jsImg + "-w.png");
-//       e.preventDefault();
-//     },
-//     mouseleave: function(e){
-//       $(jsId).attr("src","images/icon/icon-" + jsImg + ".png");
-//       e.preventDefault();
-//     }
-//   });
-// }
-// changIconSocailHeader('.i-facebook','#js-social-fb','facebook');
-// changIconSocailHeader('.i-gplus','#js-social-gplus','gplus');
-// changIconSocailHeader('.i-twitter','#js-social-twitter','twitter');
-// changIconSocailHeader('.i-pinterest','#js-social-pinterest','pinterest');
-// changIconSocailHeader('.i-behance','#js-social-behance','behance');
-// changIconSocailHeader('.i-dribbble','#js-social-dribbble','dribbble');
-// changIconSocailHeader('.i-email','#js-icon-email','email');
-// changIconSocailHeader('.i-phone','#js-icon-phone','phone');
-// changIconSocailHeader('.scroll-to-top','#js-scroll-to-top','scroll-up');
-// changIconSocailHeader('.dots-next','#js-dot-next','dot-next');
-// changIconSocailHeader('.dots-previous','#js-dot-prev','dot-prev');
-
-// Chang icon before hover button slide
-    // prev
-// $(".js-prev-slide").on({
-//   mouseenter: function(e){
-//     $("#js-prev-slide").attr("src","images/icon/icon-prev-hv.png");
-//     e.preventDefault();
-//   },
-//   mouseleave: function(e){
-//     $("#js-prev-slide").attr("src","images/icon/icon-prev.png");
-//     e.preventDefault();
-//   }
-// });
-    // next
-// $(".js-next-slide").on({
-//   mouseenter: function(e){
-//     $("#js-next-slide").attr("src","images/icon/icon-next-hv.png");
-//     e.preventDefault();
-//   },
-//   mouseleave: function(e){
-//     $("#js-next-slide").attr("src","images/icon/icon-next.png");
-//     e.preventDefault();
-//   }
-// });
 
 // Set location megamenu
 function setLocationMegamenu(wcontainer, selector){
@@ -186,18 +114,6 @@ $('.js-lw-carousel').owlCarousel({
   dotsEach: true,
   autoplayTimeout: 1000
 })
-// $("<a class='dots-previous'><img src='images/icon/icon-dot-prev.png' id='js-dot-prev' alt='Next'></a>").prependTo(".js-lw-carousel .owl-dots");
-// $("<a class='dots-next'><img src='images/icon/icon-dot-next.png' id='js-dot-next' alt='Prev'></a>").appendTo(".js-lw-carousel .owl-dots");
-
-// // Latest works button click
-// $('.dots-previous').on('click', function(e){
-//   $(".lh-prev-carousel").click();
-//   e.preventDefault();
-// })
-// $('.dots-next').on('click', function(e){  
-//   $(".lh-next-carousel").click();
-//   e.preventDefault();
-// })
 
 // Slide
 $('.js-slide').owlCarousel({

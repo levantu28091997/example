@@ -1,30 +1,32 @@
 <?php get_header(); ?>
 
-	<div class="main-content">
-		<div class="archive-title">
-			<?php
-                        if ( is_tag() ) :
-                                printf( __('Posts Tagged: %1$s','tuti'), single_tag_title( '', false ) );
-                        elseif ( is_category() ) :
-                                printf( __('Posts Categorized: %1$s','tuti'), single_cat_title( '', false ) );
-                        elseif ( is_day() ) :
-                                printf( __('Daily Archives: %1$s','tuti'), get_the_time('l, F j, Y') );
-                        elseif ( is_month() ) :
-                                printf( __('Monthly Archives: %1$s','tuti'), get_the_time('F Y') );
-                        elseif ( is_year() ) :
-                                printf( __('Yearly Archives: %1$s','tuti'), get_the_time('Y') );
-                        endif;
-                ?>
-		</div>
-		<?php if ( is_tag() || is_category() ) : ?>
-	        <div class="archive-description">
-	                <?php echo term_description(); ?>
-	        </div>
-		<?php endif; ?>
-
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-           <h2><?php the_title(); ?></h2>
-        <?php endwhile; ?>
-	</div>
-
+    <div class="main-content">
+        <div class="detail-bg page-container">
+            <div class="container">
+                <div class="list-post">
+                    <div class="row">
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <div class="col-md-4">
+                                <div class="post-item">
+                                    <div class="post-thumb">
+                                        <img src="<?php echo get_template_directory_uri().'/core/assets/'?>images/figure/img-figure1.png" alt="Img">
+                                        <h3 class="post-title"><?php the_title(); ?></h3>
+                                    </div>
+                                    <div class="post-content">
+                                        <p class="post-des">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <a href="" class="link-more">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php else : ?>
+                            <h3>Không có bài viết nào ..!</h3>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
 <?php get_footer(); ?>

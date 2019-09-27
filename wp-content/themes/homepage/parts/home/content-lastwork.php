@@ -26,7 +26,7 @@
 
                     <div class="col-md-6">
                         <div class="figure-item-box">
-                            <a href="">
+                            <a href="<?php the_permalink(); ?>">
                                 <div class="figure-item">
                                     <div class="figure__box">
                                         <?php the_post_thumbnail(); ?>
@@ -67,7 +67,7 @@
                                 if ( $argc2->have_posts() ) : while( $argc2->have_posts() ) : $argc2->the_post() 
                                 ?>
                                 <div class="col-md-3 lwc-box-item">
-                                    <a href="">
+                                    <a href="<?php the_permalink(); ?>">
                                         <div class="lwc-item">
                                             <?php the_post_thumbnail(); ?>
                                             <div class="carousel-overlay">
